@@ -101,8 +101,8 @@ const Index = () => {
       <header className="bg-white border-b sticky top-0 z-50 shadow-sm">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <Icon name="Wind" size={32} className="text-primary" />
+            <div className="flex items-center gap-3">
+              <img src="https://cdn.poehali.dev/projects/81e3edf1-95ec-4eff-af46-395df3a00c3d/files/e21edda3-d48b-4abe-ba5f-42044a8a87fc.jpg" alt="ClimatePro" className="h-10 w-10 object-contain" />
               <h1 className="text-2xl font-bold text-primary">ClimatePro</h1>
             </div>
             <nav className="hidden md:flex gap-8">
@@ -385,7 +385,7 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <Icon name="Wind" size={28} className="text-primary" />
+                <img src="https://cdn.poehali.dev/projects/81e3edf1-95ec-4eff-af46-395df3a00c3d/files/e21edda3-d48b-4abe-ba5f-42044a8a87fc.jpg" alt="ClimatePro" className="h-8 w-8 object-contain" />
                 <h3 className="text-xl font-bold">ClimatePro</h3>
               </div>
               <p className="text-sm text-muted-foreground">
