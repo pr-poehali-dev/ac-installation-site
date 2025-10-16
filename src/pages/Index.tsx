@@ -355,6 +355,95 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <Badge className="mb-4">Отзывы клиентов</Badge>
+            <h2 className="text-4xl font-bold mb-4">Что говорят наши клиенты</h2>
+            <p className="text-xl text-muted-foreground">
+              Более 500 успешно выполненных проектов
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="animate-fade-in">
+              <CardHeader>
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Icon name="User" size={24} className="text-primary" />
+                  </div>
+                  <div>
+                    <CardTitle className="text-lg">Александр Петров</CardTitle>
+                    <CardDescription>Владелец квартиры</CardDescription>
+                  </div>
+                </div>
+                <div className="flex gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Icon key={i} name="Star" size={16} className="text-yellow-500 fill-yellow-500" />
+                  ))}
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Отличная работа! Установили кондиционер за 3 часа, всё аккуратно и профессионально. 
+                  Мастера объяснили как пользоваться и настроили под наши нужды. Рекомендую!
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <CardHeader>
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Icon name="User" size={24} className="text-primary" />
+                  </div>
+                  <div>
+                    <CardTitle className="text-lg">Мария Соколова</CardTitle>
+                    <CardDescription>Директор офиса</CardDescription>
+                  </div>
+                </div>
+                <div className="flex gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Icon key={i} name="Star" size={16} className="text-yellow-500 fill-yellow-500" />
+                  ))}
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Заказывали установку системы кондиционирования для всего офиса. 
+                  Проект выполнен в срок, цена соответствует качеству. Сотрудники довольны комфортом!
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <CardHeader>
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Icon name="User" size={24} className="text-primary" />
+                  </div>
+                  <div>
+                    <CardTitle className="text-lg">Дмитрий Волков</CardTitle>
+                    <CardDescription>Владелец ресторана</CardDescription>
+                  </div>
+                </div>
+                <div className="flex gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Icon key={i} name="Star" size={16} className="text-yellow-500 fill-yellow-500" />
+                  ))}
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Работаем с ClimatePro уже 2 года. Быстрое обслуживание, всегда на связи. 
+                  Недавно заказывали срочный ремонт - приехали в течение часа и всё починили.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" className="py-20 bg-gradient-to-br from-primary to-accent text-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
