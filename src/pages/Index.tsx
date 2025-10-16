@@ -12,6 +12,7 @@ const Index = () => {
   const [area, setArea] = useState('');
   const [installType, setInstallType] = useState('');
   const [calculatedPrice, setCalculatedPrice] = useState<number | null>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const products = [
     {
@@ -111,8 +112,53 @@ const Index = () => {
               <a href="#calculator" className="text-foreground hover:text-primary transition-colors font-medium">Калькулятор</a>
               <a href="#contact" className="text-foreground hover:text-primary transition-colors font-medium">Контакты</a>
             </nav>
-            <Button className="hidden md:inline-flex">Заказать звонок</Button>
+            <div className="flex items-center gap-3">
+              <Button className="hidden md:inline-flex">Заказать звонок</Button>
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="md:hidden"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              >
+                <Icon name={mobileMenuOpen ? "X" : "Menu"} size={24} />
+              </Button>
+            </div>
           </div>
+          {mobileMenuOpen && (
+            <div className="md:hidden mt-4 pb-4 border-t pt-4 animate-fade-in">
+              <nav className="flex flex-col gap-4">
+                <a 
+                  href="#catalog" 
+                  className="text-foreground hover:text-primary transition-colors font-medium py-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Каталог
+                </a>
+                <a 
+                  href="#services" 
+                  className="text-foreground hover:text-primary transition-colors font-medium py-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Услуги
+                </a>
+                <a 
+                  href="#calculator" 
+                  className="text-foreground hover:text-primary transition-colors font-medium py-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Калькулятор
+                </a>
+                <a 
+                  href="#contact" 
+                  className="text-foreground hover:text-primary transition-colors font-medium py-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Контакты
+                </a>
+                <Button className="w-full mt-2">Заказать звонок</Button>
+              </nav>
+            </div>
+          )}
         </div>
       </header>
 
